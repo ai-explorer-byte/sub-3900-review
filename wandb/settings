@@ -1,0 +1,5 @@
+[default]
+entity = sample_name
+project = icb-sum
+base_url = https://api.wandb.ai
+

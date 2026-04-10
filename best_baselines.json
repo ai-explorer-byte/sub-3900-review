@@ -1,0 +1,387 @@
+{
+  "summary": {
+    "budgets": [
+      250,
+      500,
+      750,
+      1000,
+      1250,
+      1500
+    ],
+    "prior_methods": [
+      "centroid",
+      "coreset"
+    ],
+    "models": [
+      "BAAI/bge-m3",
+      "NovaSearch/stella_en_1.5B_v5",
+      "all-MiniLM-L6-v2",
+      "google/embeddinggemma-300m",
+      "Qwen/Qwen3-Embedding-0.6B",
+      "all-mpnet-base-v2"
+    ],
+    "objectives": [
+      "mmr",
+      "graphcut",
+      "fl",
+      "dpp"
+    ],
+    "solvers": [
+      "greedy",
+      "cost_norm",
+      "dpp",
+      "topk"
+    ],
+    "total_records": 720
+  },
+  "best_overall": {
+    "prior_method": "coreset",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "budget": 1500,
+    "config": "prior/fl/cost_norm",
+    "objective": "fl",
+    "solver": "cost_norm",
+    "avg_decision_coverage": 0.954353021242383,
+    "global_gr_coverage": 0.9500974374453508,
+    "redundancy_score": 0.6878479398646444,
+    "avg_density_phi": 0.022090583196226157
+  },
+  "best_by_budget": {
+    "250": {
+      "prior_method": "coreset",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.9122595972287479,
+      "global_gr_coverage": 0.9026690337687092,
+      "redundancy_score": 0.7278924620938751
+    },
+    "500": {
+      "prior_method": "coreset",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.9324273298341912,
+      "global_gr_coverage": 0.9234072352605488,
+      "redundancy_score": 0.7099888715541588
+    },
+    "750": {
+      "prior_method": "coreset",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.9408938047920511,
+      "global_gr_coverage": 0.9329476067325542,
+      "redundancy_score": 0.7020341798944293
+    },
+    "1000": {
+      "prior_method": "centroid",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.9484316460687808,
+      "global_gr_coverage": 0.9410009720784094,
+      "redundancy_score": 0.6967241013387464
+    },
+    "1250": {
+      "prior_method": "coreset",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.9516001448488763,
+      "global_gr_coverage": 0.9461895536485143,
+      "redundancy_score": 0.6920186472388933
+    },
+    "1500": {
+      "prior_method": "coreset",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.954353021242383,
+      "global_gr_coverage": 0.9500974374453508,
+      "redundancy_score": 0.6878479398646444
+    }
+  },
+  "best_by_prior_method": {
+    "centroid": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.9543412798402582,
+      "global_gr_coverage": 0.9484392133344903,
+      "redundancy_score": 0.6869974046383264
+    },
+    "coreset": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.954353021242383,
+      "global_gr_coverage": 0.9500974374453508,
+      "redundancy_score": 0.6878479398646444
+    }
+  },
+  "best_by_model": {
+    "BAAI/bge-m3": {
+      "prior_method": "coreset",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.8958417555734207,
+      "global_gr_coverage": 0.8831728992650151,
+      "redundancy_score": 0.47533281766018776
+    },
+    "NovaSearch/stella_en_1.5B_v5": {
+      "prior_method": "coreset",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.8837493864771057,
+      "global_gr_coverage": 0.8672529601917842,
+      "redundancy_score": 0.35660774246701654
+    },
+    "all-MiniLM-L6-v2": {
+      "prior_method": "centroid",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.822972071735697,
+      "global_gr_coverage": 0.8318010449512084,
+      "redundancy_score": 0.22230316958618615
+    },
+    "google/embeddinggemma-300m": {
+      "prior_method": "centroid",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.851227408319075,
+      "global_gr_coverage": 0.8354506749204808,
+      "redundancy_score": 0.32293706823070095
+    },
+    "Qwen/Qwen3-Embedding-0.6B": {
+      "prior_method": "coreset",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.954353021242383,
+      "global_gr_coverage": 0.9500974374453508,
+      "redundancy_score": 0.6878479398646444
+    },
+    "all-mpnet-base-v2": {
+      "prior_method": "coreset",
+      "budget": 1500,
+      "config": "prior/fl/cost_norm",
+      "avg_decision_coverage": 0.8401527324495364,
+      "global_gr_coverage": 0.8453161656887895,
+      "redundancy_score": 0.24766264912092462
+    }
+  },
+  "model_rankings": {
+    "250": {
+      "Qwen/Qwen3-Embedding-0.6B": {
+        "rank": 1,
+        "coverage": 0.9122595972287479
+      },
+      "BAAI/bge-m3": {
+        "rank": 2,
+        "coverage": 0.8091955498209342
+      },
+      "NovaSearch/stella_en_1.5B_v5": {
+        "rank": 3,
+        "coverage": 0.7713425329314303
+      },
+      "google/embeddinggemma-300m": {
+        "rank": 4,
+        "coverage": 0.7248356924389343
+      },
+      "all-mpnet-base-v2": {
+        "rank": 5,
+        "coverage": 0.6940866086101125
+      },
+      "all-MiniLM-L6-v2": {
+        "rank": 6,
+        "coverage": 0.6652845387964497
+      }
+    },
+    "500": {
+      "Qwen/Qwen3-Embedding-0.6B": {
+        "rank": 1,
+        "coverage": 0.9324273298341912
+      },
+      "BAAI/bge-m3": {
+        "rank": 2,
+        "coverage": 0.8470920202457465
+      },
+      "NovaSearch/stella_en_1.5B_v5": {
+        "rank": 3,
+        "coverage": 0.8217280033357995
+      },
+      "google/embeddinggemma-300m": {
+        "rank": 4,
+        "coverage": 0.784384970847346
+      },
+      "all-mpnet-base-v2": {
+        "rank": 5,
+        "coverage": 0.756958521714759
+      },
+      "all-MiniLM-L6-v2": {
+        "rank": 6,
+        "coverage": 0.7308396599219138
+      }
+    },
+    "750": {
+      "Qwen/Qwen3-Embedding-0.6B": {
+        "rank": 1,
+        "coverage": 0.9408938047920511
+      },
+      "BAAI/bge-m3": {
+        "rank": 2,
+        "coverage": 0.8683223590514769
+      },
+      "NovaSearch/stella_en_1.5B_v5": {
+        "rank": 3,
+        "coverage": 0.8478072955858756
+      },
+      "google/embeddinggemma-300m": {
+        "rank": 4,
+        "coverage": 0.809782351305665
+      },
+      "all-mpnet-base-v2": {
+        "rank": 5,
+        "coverage": 0.78907576909135
+      },
+      "all-MiniLM-L6-v2": {
+        "rank": 6,
+        "coverage": 0.7655149995272371
+      }
+    },
+    "1000": {
+      "Qwen/Qwen3-Embedding-0.6B": {
+        "rank": 1,
+        "coverage": 0.9484316460687808
+      },
+      "BAAI/bge-m3": {
+        "rank": 2,
+        "coverage": 0.8797643838876371
+      },
+      "NovaSearch/stella_en_1.5B_v5": {
+        "rank": 3,
+        "coverage": 0.8616028308967608
+      },
+      "google/embeddinggemma-300m": {
+        "rank": 4,
+        "coverage": 0.8242830016741819
+      },
+      "all-mpnet-base-v2": {
+        "rank": 5,
+        "coverage": 0.8168384388264892
+      },
+      "all-MiniLM-L6-v2": {
+        "rank": 6,
+        "coverage": 0.7913928518661032
+      }
+    },
+    "1250": {
+      "Qwen/Qwen3-Embedding-0.6B": {
+        "rank": 1,
+        "coverage": 0.9516001448488763
+      },
+      "BAAI/bge-m3": {
+        "rank": 2,
+        "coverage": 0.887816566808924
+      },
+      "NovaSearch/stella_en_1.5B_v5": {
+        "rank": 3,
+        "coverage": 0.8733946553065243
+      },
+      "google/embeddinggemma-300m": {
+        "rank": 4,
+        "coverage": 0.8405834523527304
+      },
+      "all-mpnet-base-v2": {
+        "rank": 5,
+        "coverage": 0.8344148479628979
+      },
+      "all-MiniLM-L6-v2": {
+        "rank": 6,
+        "coverage": 0.8078841479571541
+      }
+    },
+    "1500": {
+      "Qwen/Qwen3-Embedding-0.6B": {
+        "rank": 1,
+        "coverage": 0.954353021242383
+      },
+      "BAAI/bge-m3": {
+        "rank": 2,
+        "coverage": 0.8958417555734207
+      },
+      "NovaSearch/stella_en_1.5B_v5": {
+        "rank": 3,
+        "coverage": 0.8837493864771057
+      },
+      "google/embeddinggemma-300m": {
+        "rank": 4,
+        "coverage": 0.851227408319075
+      },
+      "all-mpnet-base-v2": {
+        "rank": 5,
+        "coverage": 0.8401527324495364
+      },
+      "all-MiniLM-L6-v2": {
+        "rank": 6,
+        "coverage": 0.822972071735697
+      }
+    }
+  },
+  "prior_method_comparison": {
+    "centroid": {
+      "avg_decision_coverage": 0.624919586855632,
+      "global_gr_coverage": 0.6070845690741298,
+      "redundancy_score": 0.34763597117952433,
+      "avg_density_phi": 0.05294912345887104
+    },
+    "coreset": {
+      "avg_decision_coverage": 0.6479626319632766,
+      "global_gr_coverage": 0.628914840226132,
+      "redundancy_score": 0.33325520441589057,
+      "avg_density_phi": 0.07714594500589642
+    },
+    "winner": "coreset",
+    "improvement_pct": 3.6873616369729865
+  },
+  "solver_comparison": {
+    "greedy": {
+      "avg_decision_coverage": 0.6909228448958668,
+      "global_gr_coverage": 0.6790030443147543,
+      "redundancy_score": 0.26761456571673686
+    },
+    "cost_norm": {
+      "avg_decision_coverage": 0.7113715248679439,
+      "global_gr_coverage": 0.6993872317954923,
+      "redundancy_score": 0.28346366086406866
+    },
+    "dpp": {
+      "avg_decision_coverage": 0.5888038788830645,
+      "global_gr_coverage": 0.5597201865186862,
+      "redundancy_score": 0.29875032815562963
+    },
+    "topk": {
+      "avg_decision_coverage": 0.5229080353066823,
+      "global_gr_coverage": 0.4950353438839609,
+      "redundancy_score": 0.48415695669300945
+    },
+    "winner": "cost_norm"
+  },
+  "objective_comparison": {
+    "mmr": {
+      "avg_decision_coverage": 0.6028206404727835,
+      "global_gr_coverage": 0.5820152760537894,
+      "redundancy_score": 0.30371151433981675
+    },
+    "graphcut": {
+      "avg_decision_coverage": 0.5989502127960661,
+      "global_gr_coverage": 0.5796380532330713,
+      "redundancy_score": 0.2974907277730127
+    },
+    "fl": {
+      "avg_decision_coverage": 0.7234315518016435,
+      "global_gr_coverage": 0.7117722907073468,
+      "redundancy_score": 0.4340329411609855
+    },
+    "dpp": {
+      "avg_decision_coverage": 0.5888038788830645,
+      "global_gr_coverage": 0.5597201865186862,
+      "redundancy_score": 0.29875032815562963
+    },
+    "winner": "fl"
+  }
+}

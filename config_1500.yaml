@@ -1,0 +1,39 @@
+# Query-Independent Budgeted Retrieval Configuration
+# KMeans with Budget 1500
+
+# Data paths
+data_path: "/Users/user/Desktop/budgeted-ret/data/train_test_all_model_embeddings.pt"
+
+# Clustering parameters
+num_clusters_k: null  # null = sqrt(n) by default
+distinctiveness_neighbors_m: 5
+tau: 1.0  # Softmax temperature
+prior_method: "kmeans"  # "kmeans" (K-Means clustering) or "coreset" (Greedy Facility Location)
+
+# Cost parameters
+gamma: 1.0  # Penalty factor for fluff
+budget_B: 1500  # Budget in cost units
+
+# Mock token simulation (for .pt data without text)
+mock_token_min: 50
+mock_token_max: 200
+
+# Objective hyperparameters
+lambda_mmr: 0.5  # MMR diversity weight
+lambda_fl: 0.1   # Facility Location coverage threshold
+
+# DPP parameters
+dpp_quality_weight: 1.0  # Weight for quality in DPP kernel
+
+# Pipeline execution (lists for batch runs)
+strategies:
+  - prior
+objectives:
+  - mmr
+  - graphcut
+  - fl
+solvers:
+  - greedy
+  - cost_norm
+  - dpp
+  - topk
